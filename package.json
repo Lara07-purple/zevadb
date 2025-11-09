@@ -1,6 +1,6 @@
 {
   "name": "zevadb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "📦 A typesafe JSON file database with Zod schema validation.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
