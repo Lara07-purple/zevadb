@@ -1,17 +1,10 @@
 {
   "name": "zevadb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "📦 A typesafe JSON file database with Zod schema validation.",
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "scripts": {
     "sandbox": "tsx sandbox/index.ts",
     "build": "tsup",
